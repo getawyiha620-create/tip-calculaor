@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width,initial-scale=1" />
+	<title>Tip Calculator</title>
+	<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+	<div class="container">
+		<h1>Tip Calculator</h1>
+
+		<div class="calculator">
+			<div class="inputs">
+				<label class="field">
+					<span class="field-label">Bill</span>
+					<input id="bill" type="number" inputmode="decimal" placeholder="0.00" min="0" step="0.01" />
+				</label>
+
+				<fieldset class="field tip-field">
+					<legend class="field-label">Select Tip %</legend>
+					<div class="tips">
+						<button type="button" class="tip-btn" data-tip="5">5%</button>
+						<button type="button" class="tip-btn" data-tip="10">10%</button>
+						<button type="button" class="tip-btn" data-tip="15">15%</button>
+						<button type="button" class="tip-btn" data-tip="25">25%</button>
+						<button type="button" class="tip-btn" data-tip="50">50%</button>
+						<input id="custom-tip" type="number" inputmode="numeric" placeholder="Custom" min="0" step="1" />
+					</div>
+				</fieldset>
+
+				<label class="field">
+					<span class="field-label">Number of People</span>
+					<input id="people" type="number" inputmode="numeric" placeholder="1" min="1" step="1" />
+					<span id="people-error" class="error" aria-live="polite"></span>
+				</label>
+			</div>
+
+			<div class="results">
+				<div class="result-row">
+					<div>
+						<p class="label">Tip Amount</p>
+						<p class="sub">/ person</p>
+					</div>
+					<div class="value" id="tip-per-person">$0.00</div>
+				</div>
+
+				<div class="result-row">
+					<div>
+						<p class="label">Total</p>
+						<p class="sub">/ person</p>
+					</div>
+					<div class="value" id="total-per-person">$0.00</div>
+				</div>
+
+				<button id="reset" disabled>Reset</button>
+			</div>
+		</div>
+
+		<footer class="attribution">Built with JavaScript</footer>
+	</div>
+
+	<script src="index.js"></script>
+</body>
+</html>
+
