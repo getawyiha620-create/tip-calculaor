@@ -1,0 +1,45 @@
+:root{
+	--bg:#f6f8fb;
+	--card:#fff;
+	--accent:#26c0ab;
+	--accent-strong:#1aa79d;
+	--text:#00454f;
+	--muted:#7f9aa3;
+	--danger:#e17457;
+	font-size:16px;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+	margin:0; font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+	background:linear-gradient(180deg,#cfeff2 0%,var(--bg) 100%);
+	color:var(--text); -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
+	display:flex; align-items:center; justify-content:center; padding:2rem;
+}
+.container{width:100%;max-width:900px}
+h1{font-size:1.25rem;margin:0 0 1rem;text-align:center}
+.calculator{display:grid;grid-template-columns:1fr 320px;gap:1.25rem}
+.inputs{background:var(--card);padding:1rem;border-radius:10px;box-shadow:0 6px 20px rgba(2,6,23,0.08)}
+.results{background:var(--accent-strong);color:white;padding:1rem;border-radius:10px;display:flex;flex-direction:column;justify-content:space-between}
+.field{display:block;margin-bottom:1rem}
+.field-label{display:block;margin-bottom:.5rem;color:var(--muted);font-weight:600}
+input[type=number]{width:100%;padding:.6rem .75rem;border-radius:6px;border:1px solid #e6eef0;font-size:1rem}
+.tip-field{border:none;padding:0;margin:0}
+.tips{display:grid;grid-template-columns:repeat(3,1fr);gap:.5rem}
+.tip-btn{background:var(--text);color:white;border:none;padding:.6rem 0;border-radius:6px;font-weight:700;cursor:pointer}
+.tip-btn.active{background:var(--accent)}
+#custom-tip{padding:.5rem .6rem}
+.error{color:var(--danger);font-size:.875rem;margin-top:.25rem;display:block}
+.result-row{display:flex;align-items:center;justify-content:space-between;margin-bottom:1rem}
+.label{margin:0;font-weight:600}
+.sub{margin:0;color:rgba(255,255,255,0.8);font-size:.875rem}
+.value{font-size:1.4rem;font-weight:700}
+#reset{background:#0d6860;color:white;border:none;padding:.75rem;border-radius:6px;cursor:pointer}
+#reset:disabled{opacity:.35;cursor:not-allowed}
+.attribution{margin-top:.75rem;text-align:center;color:var(--muted);font-size:.875rem}
+
+@media (max-width:880px){
+	.calculator{grid-template-columns:1fr;}
+	.results{order:-1}
+}
+
